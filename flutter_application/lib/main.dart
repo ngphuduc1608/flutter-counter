@@ -58,22 +58,20 @@ class _CounterPage extends State<CounterPage> {
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  OutlinedButton.icon(
+                  OutlinedButton(
                     onPressed: (){
                       setState(() {
                         _myProject.square();
                       });
                     },
-                    icon: const Icon(Icons.remove), 
-                    label: const Text('n*n')),
-                  OutlinedButton.icon(
+                    child: const Text('value*value')),
+                  OutlinedButton(
                     onPressed: (){
                       setState(() {
                         _myProject.power(3);
                       });
                     },
-                    icon: const Icon(Icons.remove), 
-                    label: const Text('n^3'))
+                    child: const Text('value^3')),
               ],),
               Expanded(
                 child: TextField(
